@@ -111,7 +111,7 @@ classname {
 </div>
 
 <div id="su" class="static" >
-<a href="https://matt.vivavita.xyz">Dissapearing</a>
+<a href="https://matt.vivavita.xyz">Margins</a>
 </div>
 
 <div id="mq" class="static" style="top:200px; left:300px">
@@ -131,8 +131,8 @@ classname {
 </div>
 
 <div style="font-family: Futura; font-variant: normal; ">
-<p style="font-weight: 700; font-style: italic;">‘
-This is an extension of a project called “And this book is a straight line in space”</p>
+<p>
+This is an extension of a project called <p style="font-weight: 700; font-style: italic;">“And this book is a straight line in space”</p></p>
 
 <p>Hosted in the Visual Arts Centre at Western University, January 2022 <br>
 ^^^^^^^^^^**^^^^^^** <br>
@@ -175,7 +175,19 @@ function MyFunction() {
 
   //]]></script>
 
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "4hmnxcwe"
+      }], "*")
+    }
 
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+	
+  </script>
 
 
 </body>
